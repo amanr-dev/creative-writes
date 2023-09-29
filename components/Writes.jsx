@@ -16,9 +16,8 @@ const Writes = ({
         background: "white",
         borderBottom: "2px solid gray",
         borderRadius: "20px",
-        padding: "25px 30px",
-        margin: "20px auto",
-        width: "50%",
+        padding: "25px 50px",
+        margin: "20px",
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -27,9 +26,9 @@ const Writes = ({
           src={avatar}
           alt="user"
         />
-        <h4>{username}</h4>
+        <h4 className="text-sm text-slate-500 p-2">{username}</h4>
       </div>
-      <div>
+      <div style={{ paddingLeft: "50px" }}>
         <p>{desc}</p>
       </div>
       {children}

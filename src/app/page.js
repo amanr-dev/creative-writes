@@ -31,18 +31,22 @@ export default function Home() {
   return (
     <main className="w-full p-2">
       <div className="my-12">
-        <h4 className="text-2xl text-slate-500">People's Thoughts</h4>
+        <h4 className="text-2xl text-slate-500">See What People sharing</h4>
       </div>
-
-      {allPosts.map((post) => (
-        <Writes key={post.id} {...post}>
-          <Link href={{ pathname: `${post.id}`, query: { ...post } }}>
-            <span className="text-sm pt-2 text-cyan-500">
-              {post.comments?.length > 0 ? post.comments?.length : 0} comments
-            </span>
-          </Link>
-        </Writes>
-      ))}
+      <section className="grid grid-cols-2 gap-6">
+        {allPosts.map((post) => (
+          <Writes key={post.id} {...post}>
+            <Link href={{ pathname: `${post.id}`, query: { ...post } }}>
+              <span
+                className="text-sm pt-2 text-cyan-500"
+                style={{ paddingLeft: "50px", paddingTop: "10px" }}
+              >
+                {post.comments?.length > 0 ? post.comments?.length : 0} comments
+              </span>
+            </Link>
+          </Writes>
+        ))}
+      </section>
     </main>
   );
 }

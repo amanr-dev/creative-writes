@@ -10,17 +10,32 @@ export default function Nav() {
   return (
     <nav
       className="flex items-center"
-      style={{ justifyContent: "space-between", padding: "20px 10px" }}
+      style={{
+        justifyContent: "space-between",
+        padding: "20px 10px",
+        borderBottom: "2px solid #0891b2",
+        background: "#fff",
+      }}
     >
       <Link href="/">
         <button
           style={{
-            fontSize: "1.1rem",
+            fontSize: "1.4rem",
             color: "rgb(8,145,178)",
             fontWeight: "600",
             textTransform: "capitalize",
+            display: "flex",
+            alignItems: "center",
           }}
         >
+          <img
+            src="https://e7.pngegg.com/pngimages/217/193/png-clipart-homework-test-education-student-computer-icons-student-people-essay.png"
+            alt="creative-writes"
+            style={{
+              width: "90px",
+              filter: "brightness(1.1)",
+            }}
+          />
           creative writes
         </button>
       </Link>
