@@ -72,7 +72,7 @@ const SlugDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       getComments();
-      console.log("getting the comments");
+     //  console.log("getting the comments");
     }, 2500);
   }, []);
 
