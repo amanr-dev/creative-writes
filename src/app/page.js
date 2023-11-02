@@ -50,7 +50,7 @@ export default function Home() {
           color="#0891B2"
         />
         <h4 className="text-slate-500 text-xl font-semibold mt-2">
-          Please wait, Loading...
+          Loading Please wait...
         </h4>
       </div>
     );
