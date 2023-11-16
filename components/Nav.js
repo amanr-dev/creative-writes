@@ -64,7 +64,7 @@ export default function Nav() {
             fontSize: "1.1rem",
             alignItems: "center",
             justifyContent: "center",
-            gap: "1.5rem",
+            gap: "0.5rem",
           }}
         >
           <Link
