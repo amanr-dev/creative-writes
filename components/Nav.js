@@ -75,7 +75,7 @@ export default function Nav() {
               borderRadius: "8px",
             }}
           >
-            <span>Write </span>
+            <span>write✍️</span>
           </Link>
           <Link href="/dashboard">
             <img
