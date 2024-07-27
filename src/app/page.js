@@ -4,16 +4,7 @@ import { useEffect, useState } from "react";
 import Writes from "../../components/Writes";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
-import {
-  Blocks,
-  Audio,
-  ColorRing,
-  Discuss,
-  ProgressBar,
-  Puff,
-  TailSpin,
-  Vortex,
-} from "react-loader-spinner";
+import { Puff } from "react-loader-spinner";
 
 export default function Home() {
   // State of all the posts
@@ -37,8 +28,6 @@ export default function Home() {
     getPosts();
   }, []);
 
-  // #0891B2
-
   if (!allPosts.length)
     return (
       <div className="flex flex-col justify-center items-center w-full h-[100vh]">
@@ -58,7 +47,7 @@ export default function Home() {
   return (
     <main className="w-full p-2">
       <div className="my-12">
-        <h4 className="text-2xl text-slate-500">See What People sharing</h4>
+        <h4 className="text-2xl text-slate-500">See what people shared</h4>
       </div>
       <section className="grid grid-cols-2 gap-6">
         {allPosts.map((post) => (
