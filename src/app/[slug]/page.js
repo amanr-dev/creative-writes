@@ -9,7 +9,6 @@ import {
   Timestamp,
   arrayUnion,
   doc,
-  getDoc,
   onSnapshot,
   updateDoc,
 } from "firebase/firestore";
@@ -30,8 +29,7 @@ const SlugDetails = () => {
       user: searchQuery.get("user"),
       username: searchQuery.get("username"),
     });
-  }, []);
-  //   console.log(posts);
+  }, [searchQuery, posts]);
 
   //   Submit comments
   const submitComments = async () => {
@@ -72,7 +70,7 @@ const SlugDetails = () => {
   useEffect(() => {
     setTimeout(() => {
       getComments();
-     //  console.log("getting the comments");
+      //  console.log("getting the comments");
     }, 2500);
   }, []);
 

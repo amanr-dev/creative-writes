@@ -1,15 +1,6 @@
-// import Link from "next/link";
 import React from "react";
-// import { AiFillEdit } from "react-icons/ai";
-// import { BiTrash } from "react-icons/bi";
 
-const Writes = ({
-  children,
-  avatar,
-
-  username,
-  desc,
-}) => {
+const Writes = ({ children, avatar, username, desc }) => {
   return (
     <div
       style={{

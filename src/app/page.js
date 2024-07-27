@@ -13,7 +13,7 @@ export default function Home() {
   const getPosts = async () => {
     const collectionRef = collection(db, "posts");
     const q = query(collectionRef, orderBy("timestamps", "desc"));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
+    const results = onSnapshot(q, (snapshot) => {
       setAllPosts(
         snapshot.docs.map((doc) => ({
           ...doc.data(),
@@ -21,12 +21,12 @@ export default function Home() {
         }))
       );
     });
-    return unsubscribe;
+    return results;
   };
 
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [allPosts]);
 
   if (!allPosts.length)
     return (
@@ -50,7 +50,7 @@ export default function Home() {
         <h4 className="text-2xl text-slate-500">See what people shared</h4>
       </div>
       <section className="grid grid-cols-2 gap-6">
-        {allPosts.map((post) => (
+        {allPosts?.map((post) => (
           <Writes key={post.id} {...post}>
             <Link href={{ pathname: `${post.id}`, query: { ...post } }}>
               <span

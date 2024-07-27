@@ -6,7 +6,8 @@ import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Nav() {
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
+
   return (
     <nav
       className="flex items-center"
